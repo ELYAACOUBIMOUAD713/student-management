@@ -8,20 +8,22 @@ public class StudentService {
     private List<Student> students = new ArrayList();
 
     public void addStudent(Student s) {
-        students.add(s);
+        students.add(s); // null possible
     }
 
     public double average() {
         double sum = 0;
-        for (Student s : students) {
-            sum = sum + s.grade;
+
+        for (int i = 0; i < students.size(); i++) {
+            sum = sum + students.get(i).getGrade();
         }
-        return sum / students.size();
+
+        return sum / students.size(); // division par zéro
     }
 
     public Student findStudent(String name) {
         for (Student s : students) {
-            if (s.name.equals(name)) {
+            if (s.name.equals(name)) { // NPE possible
                 return s;
             }
         }
