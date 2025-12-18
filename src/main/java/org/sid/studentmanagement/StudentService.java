@@ -5,7 +5,7 @@ import java.util.List;
 
 public class StudentService {
 
-    private List<Student> students = new ArrayList();
+    private final List<Student> students = new ArrayList<>();
 
     public void addStudent(Student s) {
         students.add(s); // null possible
@@ -30,3 +30,4 @@ public class StudentService {
         return null;
     }
 }
+
