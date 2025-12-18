@@ -1,8 +1,7 @@
 package org.sid.studentmanagement;
 
-package com.example;
-
 public class Student {
+
     public String name;
     public int age;
     public double grade;
@@ -11,5 +10,9 @@ public class Student {
         this.name = name;
         this.age = age;
         this.grade = grade;
+    }
+
+    public double getGrade() {
+        return grade;
     }
 }
